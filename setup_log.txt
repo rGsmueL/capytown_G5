@@ -1,0 +1,286 @@
+========== RC-0: ITEM 1 - VERIFICACION DEL SISTEMA ==========
+Fecha:
+Thu Jul 16 06:45:25 UTC 2026
+
+========== INFORMACION DEL EQUIPO ==========
+raspberrypi
+Linux raspberrypi 6.6.31+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.6.31-1+rpt1 (2024-05-29) aarch64 aarch64 aarch64 GNU/Linux
+
+========== CONFIGURACION ROS 2 ==========
+ROS_DOMAIN_ID=20
+ROS_LOCALHOST_ONLY=0
+ROS_DISTRO=humble
+
+========== NODOS ROS 2 ==========
+/YB_Car_Node
+/odom_corrector
+
+========== TOPICOS ROS 2 ==========
+/battery
+/beep
+/cmd_vel
+/imu
+/odom
+/odom_raw
+/odom_reset
+/parameter_events
+/rosout
+/scan
+/servo_s1
+/servo_s2
+/tf
+
+========== INFORMACION DE /cmd_vel ==========
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: YB_Car_Node
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.ef.6f.0f.00.18.02.00.00.00.00.00.00.05.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+
+========== INFORMACION DE /odom ==========
+Type: nav_msgs/msg/Odometry
+
+Publisher count: 1
+
+Node name: odom_corrector
+Node namespace: /
+Topic type: nav_msgs/msg/Odometry
+Endpoint type: PUBLISHER
+GID: 01.0f.ef.6f.c0.08.9b.29.01.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+========== FRECUENCIA DE /odom ==========
+average rate: 11.333
+	min: 0.076s max: 0.135s std dev: 0.01450s window: 13
+average rate: 11.101
+	min: 0.076s max: 0.135s std dev: 0.01756s window: 24
+average rate: 11.203
+	min: 0.075s max: 0.135s std dev: 0.01665s window: 36
+average rate: 11.080
+	min: 0.075s max: 0.139s std dev: 0.01768s window: 47
+average rate: 11.148
+	min: 0.071s max: 0.146s std dev: 0.01782s window: 59
+average rate: 11.073
+	min: 0.071s max: 0.146s std dev: 0.01834s window: 70
+Traceback (most recent call last):
+  File "/opt/ros/humble/bin/ros2", line 33, in <module>
+    sys.exit(load_entry_point('ros2cli==0.18.7', 'console_scripts', 'ros2')())
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2cli/cli.py", line 89, in main
+    rc = extension.main(parser=parser, args=args)
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2topic/command/topic.py", line 41, in main
+    return extension.main(args=args)
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2topic/verb/hz.py", line 89, in main
+    return main(args)
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2topic/verb/hz.py", line 104, in main
+    _rostopic_hz(node.node, topic, window_size=args.window_size, filter_expr=filter_expr,
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2topic/verb/hz.py", line 273, in _rostopic_hz
+    rclpy.spin_once(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 202, in spin_once
+    executor.spin_once(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 728, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 711, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 612, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException
+
+========== MUESTRA DE /odom ==========
+header:
+  stamp:
+    sec: 1784184336
+    nanosec: 264000000
+  frame_id: odom
+child_frame_id: base_footprint
+pose:
+  pose:
+    position:
+      x: 0.008978152350882378
+      y: 0.02478365360621102
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: -0.1344145722474006
+      w: 0.9909251852524228
+  covariance:
+  - 0.001
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.001
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.001
+twist:
+  twist:
+    linear:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    angular:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+  covariance:
+  - 0.0001
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0001
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0001
+---
+
+========== INFORMACION DE /imu ==========
+Type: sensor_msgs/msg/Imu
+
+Publisher count: 1
+
+Node name: YB_Car_Node
+Node namespace: /
+Topic type: sensor_msgs/msg/Imu
+Endpoint type: PUBLISHER
+GID: 01.0f.ef.6f.0f.00.18.02.00.00.00.00.00.00.02.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+========== INFORMACION DE /scan ==========
+Type: sensor_msgs/msg/LaserScan
+
+Publisher count: 1
+
+Node name: YB_Car_Node
+Node namespace: /
+Topic type: sensor_msgs/msg/LaserScan
+Endpoint type: PUBLISHER
+GID: 01.0f.ef.6f.0f.00.18.02.00.00.00.00.00.00.03.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+========== INFORMACION DE /tf ==========
+Type: tf2_msgs/msg/TFMessage
+
+Publisher count: 1
+
+Node name: odom_corrector
+Node namespace: /
+Topic type: tf2_msgs/msg/TFMessage
+Endpoint type: PUBLISHER
+GID: 01.0f.ef.6f.c0.08.9b.29.01.00.00.00.00.00.14.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+========== FIN DE LA VERIFICACION ==========
+Thu Jul 16 06:45:37 UTC 2026
